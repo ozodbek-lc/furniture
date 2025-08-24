@@ -23,7 +23,8 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blogs/',include('apps.blogs.urls',namespace='blogs')),
-    # path('',include('apps.pages.urls',namespace='pages')),
+    path('',include('apps.pages.urls',namespace='pages')),
+    path('contact/',include('apps.contact.urls',namespace='contact')),
 ]
 
 if settings.DEBUG:
