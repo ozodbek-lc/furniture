@@ -43,18 +43,18 @@
 
 <body {% block body_id %}{% endblock %}>
 
-    {% url 'pages:home' as home_url %}
-    {% if request.path == home_url %}
-        {% include 'layout/header-home.html' %}
-    {% else %}
-        {% include 'layout/header-base.html' %}
-    {% endif %}
+        {% url 'pages:home' as home_url %}
+        {% if request.path == home_url %}
+            {% include 'layout/header-home.html' %}
+        {% else %}
+            {% include 'layout/header-base.html' %}
+        {% endif %}
 
-    {% include 'layout/header-base.html'%}
+        {% include 'layout/header-base.html'%}
 
-    {% block content %}{% endblock %}
+        {% block content %}{% endblock %}
 
-    {% include 'layout/footer.html'%}
+        {% include 'layout/footer.html'%}
 
     <!-- back top top -->
     <div class="back-to-top">
